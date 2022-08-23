@@ -4,7 +4,7 @@ module "sameer-security-group" {
 
   name        = "sameer-sg"
   description = "SSH and HTTP open to world"
-  vpc_id      = module.vpc.vpc_id
+  vpc_id      = module.sameer-vpc.vpc_id
 
   # Ingress Rules
   ingress_rules       = ["ssh-tcp", "http-80-tcp"]
