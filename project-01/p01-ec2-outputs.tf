@@ -1,11 +1,6 @@
 # AWS EC2 Instance Terraform Outputs
 # Public EC2 Instances - Web Server
 
-output "ec2_webserver_ami" {
-  description = "AMI used for EC2 webserver instance"
-  value       = module.web-server-instance.ami_id
-}
-
 output "ec2_webserver_instance_ids" {
   description = "List of IDs of instances"
   value       = module.web-server-instance.id

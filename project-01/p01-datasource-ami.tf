@@ -1,10 +1,15 @@
 # Get latest AMI ID Ubuntu Linux
 data "aws_ami" "ubuntu" {
   most_recent = true
-  owners      = ["099720109477"]
+  owners      = ["099720109477"] # Canonical
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-*-amd64-server-*"]
+  }
+  # owners = [ "amazon" ]
   # filter {
-  #   name   = "name"
-  #   values = ["ubuntu-jammy-*"]
+  #   name = "name"
+  #   values = [ "amzn2-ami-hvm-*-gp2" ]
   # }
   filter {
     name   = "root-device-type"
