@@ -4,7 +4,7 @@ This project creates a VPC, a public subnet inside the VPC and EC2 instance in t
 
 ![](project-01.png)
 
-Instead of defining all resources individually, this project leverages Terraform AWS modules as it simplifies our code.
+Instead of defining all resources individually, this project leverages Terraform AWS modules as it simplifies our code. In this case, although internet gateway, route table, EBS volume etc. have not been explicitly specified, these will be created.
 
 This project uses the following modules:
 - [vpc](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws)
